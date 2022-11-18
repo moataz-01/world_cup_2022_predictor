@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+    background-color: #15202b;
+    text-align: center;
+}
+
+.swipe i{
+    animation-name: swp;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes swp {
+    from{padding-left: 0px;}
+    to{padding-left: 20px;}
+}
+.header {
+    width: 700px;
+    display: flex;
+    background-color: #1e2732;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+.header h3 {
+    font-size: 40px;
+    color: #fefefb;
+    text-shadow: 4px 4px 4px black;
+}
+.header h1 {
+    font-size: 60px;
+    color: #fefefb;
+    text-shadow: 4px 4px 4px black;
+}
+/* .header h2 {
+    color: #c29244;
+    font-size: 30px;
+} */
+.world-cup-pic img {
+    width: 120px;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.title .sub {
+    font-size: 13px;
+    color: grey;
+}
+.groups {
+    width: 60%;
+    /* height: 500px; */
+    /* border: #fefefb solid 2px; */
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin: 0px auto;
+    padding: 20px 0;
+}
+.groups::-webkit-scrollbar {
+    height: 6px;
+    background: white;
+}
+.groups::-webkit-scrollbar-thumb {
+    background-color: #c29244;
+}
+.groups .group {
+    width: 360px;
+    display: inline-block;
+}
+.groups .group .top {
+    text-align: center;
+    width: 80%;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}
+.country {
+    background-color: grey;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+
+}
+.groups .group .top .country img, .groups .group .bottom .predict img, .container .playoffs img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.groups .group .bottom {
+    width: 80%;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+}
+.groups .group .bottom span {
+    font-weight: normal;
+    font-size: 13px;
+    color: rgb(196, 196, 196);
+}
+.groups .group .bottom .predict {
+    border: 1px solid white;  
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+}
+.btn {
+    padding: 20px 80px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(95, 95, 95);
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+}
+#msg {
+    color: red;
+    margin: 5px auto;
+}
+.container {
+    display: none;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.container .playoffs span {
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.container .playoffs .matches{
+    display: flex;
+    justify-content: center;
+}
+.mark {
+    background-color: #f2f7fe;
+    color: grey;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.playoffs {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+@media screen and (max-width:375px) {
+    .header, .title, .groups{
+        width: 88%;
+        margin: 10px auto;
+    }
+    .header {
+        margin-top: 0;
+    }
+    .header h3 {
+        font-size: 18px;
+    }
+    .header h1 {
+        font-size: 28px;
+    }
+    .world-cup-pic img {
+        width: 50px;
+    }
+    .title {
+        font-size: 15px;
+    }
+    .title .sub {
+        font-size: 11px;
+    }
+    .groups .group, .groups .group .top, .groups .group .bottom {
+        width: 100%;
+    }
+    .groups .group .top .country, .groups .group .bottom .predict {
+        padding: 4px;
+        font-size:medium;
+    }
+    .groups .group .top .country img, .groups .group .bottom .predict img, .container .playoffs img{
+        width: 18px;
+        height: 18px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: medium;
+    }
+    #msg {
+        font-size: 13px;
+    }
+    .container .playoffs {
+        width: 80%;
+        margin: 10px auto;
+        
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .playoffs .matches div div {
+        font-size: 11px;
+        width: 90px;
+        padding: 1px;
+        font-weight: bolder;
+        margin-right: 8px;
+    }
+}
+@media screen and (min-width:376px) and (max-width:540px) {
+    .header, .title, .groups{
+        width: 80%;
+        margin: 10px auto;
+    }
+    .header h3 {
+        font-size: 18px;
+    }
+    .header h1 {
+        font-size: 28px;
+    }
+    .world-cup-pic img {
+        width: 50px;
+    }
+    .title {
+        font-size: 16px;
+    }
+    .title .sub {
+        font-size: 11px;
+    }
+    .groups .group, .groups .group .top, .groups .group .bottom {
+        width: 100%;
+    }
+    .groups .group .top .country, .groups .group .bottom .predict {
+        padding: 8px;
+        font-size:medium;
+    }
+    .groups .group .top .country img, .groups .group .bottom .predict img{
+        width: 30px;
+        height: 30px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: medium;
+    }
+    .container .playoffs {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .playoffs .matches div div {
+        font-size: 11px;
+        width: 100px;
+        padding: 1px;
+        font-weight: bolder;
+        margin-right: 8px;
+    }
+
+}
